@@ -1,0 +1,459 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  /* styles/globals.css */
+  body{
+    width:100%;
+    overflow-x: none;
+  }
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--chatvid));
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 24 9.8% 10%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 1rem;
+    --chatvid:60 4.8% 99.9%;
+    --chatvid-hover:56 4.8% 94.9%;
+    --soft-accent:24 9.8% 10%;
+    --link:253 28% 46%;
+    --edit:246, 0%, 95%, 1
+
+
+  ;
+    --sidebar-background:0 0% 98%;
+    --sidebar-foreground:240 5.3% 26.1%;
+    --sidebar-primary:240 5.9% 10%;
+    --sidebar-primary-foreground:0 0% 98%;
+    --sidebar-accent:240 4.8% 95.9%;
+    --sidebar-accent-foreground:240 5.9% 10%;
+    --sidebar-border:220 13% 91%;
+    --sidebar-ring:217.2 91.2% 59.8%}
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+    --radius: 1rem;
+    --chatvid:5 3.5% 10.1%;
+    --chatvid-hover:12 6.5% 15.1%;
+    --soft-accent: 60 9.1% 97.8%;
+    --link:248, 40%, 71%, 1;
+    --edit:12 6.5% 15.1%;
+    --sidebar-background:240 5.9% 10%;
+    --sidebar-foreground:240 4.8% 95.9%;
+    --sidebar-primary:224.3 76.3% 48%;
+    --sidebar-primary-foreground:0 0% 100%;
+    --sidebar-accent:240 3.7% 15.9%;
+    --sidebar-accent-foreground:240 4.8% 95.9%;
+    --sidebar-border:240 3.7% 15.9%;
+    --sidebar-ring:217.2 91.2% 59.8%;
+
+
+  }
+  .zinc{
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+    --chatvid:280 4.7% 18.9%;
+    --chatvid-hover:240 3.7% 15.9%;
+    --soft-accent:0 0% 98%;
+    --link:253, 40%, 46%, 1;
+    --edit:353, 84%, 73%, 1;
+
+
+  }
+  .violet{
+    --background: 253 10% 5%;
+    --foreground: 253 2% 90%;
+    --card: 253 2% 3%;
+    --card-foreground: 253 2% 90%;
+    --popover: 253 10% 5%;
+    --popover-foreground: 253 2% 90%;
+    --primary: 253 28% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 253 10% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 10% 15%;
+    --muted-foreground: 253 2% 60%;
+    --accent: 215 10% 15%;
+    --accent-foreground: 253 2% 90%;
+    --destructive: 0 50% 30%;
+    --destructive-foreground: 253 2% 90%;
+    --border: 253 20% 18%;
+    --input: 253 20% 18%;
+    --ring: 253 28% 46%;
+    --radius: 0.5rem;
+    --chatvid:212 9% 12%;
+    --chatvid-hover:215 10% 15%;
+    --soft-accent:253 28% 46%;
+    --link:253 28% 46%;
+    --edit:353, 84%, 73%, 1;
+
+
+   }
+   .rose{
+    --background: 352 12% 95%;
+    --foreground: 352 5% 2%;
+    --card: 352 12% 90%;
+    --card-foreground: 352 5% 10%;
+    --popover: 352 12% 95%;
+    --popover-foreground: 352 95% 2%;
+    --primary: 352 100% 73%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 352 12% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 314 12% 85%;
+    --muted-foreground: 352 5% 35%;
+    --accent: 314 12% 80%;
+    --accent-foreground: 352 5% 10%;
+    --destructive: 0 50% 30%;
+    --destructive-foreground: 352 5% 90%;
+    --border: 352 20% 50%;
+    --input: 352 20% 18%;
+    --ring: 352 100% 73%;
+    --radius: 1rem;
+    --chatvid:314 12% 85%;
+    --chatvid-hover:314 12% 80%;
+    --soft-accent:347, 97%, 84%, 1;
+    --link:349, 100%, 76%, 1;
+    --edit:348, 60%, 84%, 1
+
+
+   }
+   .berry{
+      --background: 260 49% 97%;
+  --foreground: 260 5% 10%;
+  --card: 260 49% 97%;
+  --card-foreground: 260 5% 15%;
+  --popover: 260 49% 97%;
+  --popover-foreground: 260 95% 10%;
+  --primary: 260 84% 81%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 260 30% 90%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 222 30% 95%;
+  --muted-foreground: 260 5% 40%;
+  --accent: 222 30% 90%;
+  --accent-foreground: 260 5% 15%;
+  --destructive: 0 50% 50%;
+  --destructive-foreground: 260 5% 97%;
+  --border: 260 30% 82%;
+  --input: 260 30% 50%;
+  --ring: 260 84% 81%;
+  --radius: 1rem;
+  --chatvid:270 40% 95%;
+  --chatvid-hover:262 38% 93%;
+  --soft-accent:260 84% 81%;
+  --edit:353, 84%, 73%, 1;
+   }
+}
+.pre-wrap {
+  word-wrap: pre-wrap;
+  white-space: pre-wrap; /* Ensures white spaces and line breaks are respected */
+}
+
+.hljs{
+  background-color: transparent !important;
+}
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+  /* In your global CSS file or a CSS module */
+@keyframes confetti-explode {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.5);
+  }
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  background-color: currentColor;
+  opacity: 0;
+  pointer-events: none;
+  animation: confetti-explode 1s forwards;
+  z-index: 999;
+}
+
+pre {
+  white-space: pre-wrap; /* Ensures text wraps while preserving whitespace and newlines */
+}
+
+.confetti-container {
+  position: fixed; /* Changed from absolute to fixed */
+  pointer-events: none;
+  overflow: visible;
+  z-index: 10000; /* Ensure it appears above the dropdown */
+  top: 0; /* Reset top to 0 */
+  left: 0; /* Reset left to 0 */
+  width: 100%; /* Take the full width */
+  height: 100%; /* Take the full height */
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1.0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.sparkle {
+  animation: sparkle 3s infinite;
+}
+
+/* Example CSS - Ensure this is correctly applied */
+#slash-command {
+  z-index: 9999; /* Ensure it's on top */
+  display: block; /* Ensure it's displayed */
+}
+
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: .25s;
+}
+
+.bar:nth-child(3) {
+animation-delay: .5s;
+}
+
+@keyframes scale-up4 {
+20% {
+  background-color: hsl(var(--muted));
+  transform: scaleY(1.5);
+}
+
+40% {
+  transform: scaleY(1);
+}
+}
+
+@keyframes sparkle {
+  0% { transform: rotate(0deg); opacity: 1; }
+  50% { transform: rotate(20deg); opacity: 0.7; }
+  100% { transform: rotate(0deg); opacity: 1; }
+}
+
+.sparkle-effect {
+  animation: sparkle 1s infinite alternate;
+}
+
+@layer base {
+  :root {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --sidebar-background: 14 5.2% 8%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+.sidebar-collapsed .sidebar-menu-button {
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+.sidebar-collapsed .category-content {
+  display: none;
+}
+
+.sidebar-collapsed .category-icon {
+  margin: 0;
+}
+/* Add any additional colors you need */
+
+/* Custom color classes for task deadlines */
+.text-overdue {
+  color: #f56565; /* Red for overdue */
+}
+
+.due-date-background {
+  background-color: rgb(254, 254, 254); /* Light yellow background */
+  padding: 0.2rem 0.4rem; /* Add some padding for better appearance */
+  border-radius: 0.25rem; /* Slightly rounded corners */
+}
+
+.text-less-than-1h {
+  color: #e1381e; /* Amber for less than 1 hour */
+}
+
+.text-less-than-24h {
+
+  color: #f94f06 ; /* Yellow for less than 24 hours */
+}
+
+.text-due-in-1-2d {
+  color: #f9be1a; /* Darker Amber for due in 1-2 days */
+}
+.text-more-than-2d {
+  color: #38a169; /* Emerald for more than 2 days */
+}
+
+.text-fuchsia {
+  color: #d53f8c; /* Fuchsia for less than 24 hours */
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-animation {
+  background: linear-gradient(270deg, 
+    rgba(255, 204, 204, 0.3), /* Light Red */
+    rgba(204, 255, 204, 0.3), /* Light Green */
+    rgba(204, 204, 255, 0.3), /* Light Blue */
+    rgba(255, 255, 204, 0.3), /* Light Yellow */
+    rgba(255, 204, 255, 0.3)  /* Light Pink */
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+
+  .glow-effect {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .glow-effect:focus {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Stronger glow on focus */
+  }
+/* Add this to your CSS file */
+.glow-effect {
+  box-shadow: 0 0 10px rgba(154, 122, 251, 0.7), 0 0 20px rgba(0, 162, 255, 0.5), 0 0 30px rgba(0, 162, 255, 0.3);
+}
+
+input:focus {
+  backdrop-filter: blur(5px);
+}
