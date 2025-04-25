@@ -77,16 +77,13 @@ AUTH_FIREBASE_PRIVATE_KEY="your_firebase_private_key"
 - **NextAuth**: Use any random secure string for `NEXTAUTH_SECRET`.
 - **OpenAI API Key**: [Get it here](https://platform.openai.com/account/api-keys).
 - **Google Auth**:
+
   - Create OAuth credentials [in Google Cloud Console](https://console.cloud.google.com/).
   - Add `http://localhost:3000` to Authorized Redirect URIs.
-
-![Google Auth Image 1](GOOGLEAUTH1.png)
 
 - **Firebase Config**:
   - Set up a project at [Firebase Console](https://console.firebase.google.com/).
   - Use the web app config and service account keys.
-
-![Google Auth Image 2](GOOGLEAUTH2.png)
 
 ## Firebase Setup
 
@@ -94,14 +91,16 @@ AUTH_FIREBASE_PRIVATE_KEY="your_firebase_private_key"
 2. On the left sidebar, create and enable Firestore and Authentication (2 modules).
 3. Keep defaults for Firestore or you can enable test mode which may work better.
 
-![Google Auth Image 3](GOOGLEAUTH3.png)
-
 ## Authentication
 
 4. For Authentication, add a new provider and choose Google and enable.
-5. When you click on the Google provider and hover over "Safelist client IDs from external projects (optional)," you should see a link to go to the Google console. Refer to image "GOOGLEAUTH1.png" in /public for a better idea.
-6. Click on the edit (pencil) icon next to OAuth2 and then copy the GOOGLE CLIENT ID and GOOGLE SECRET and paste them into your .env. "GOOGLEAUTH2.png"
-7. On the same page, add "http://localhost:3000" to the Authorized Javascript Origins and add "http://localhost:3000/api/auth/callback/google" to Authorized Redirect URIs. "GOOGLEAUTH3.png"
+5. When you click on the Google provider and hover over "Safelist client IDs from external projects (optional)," you should see a link to go to the Google console.
+   ![Google Auth Image 1](/public/GoogleAuth1.png)
+6. Click on the edit (pencil) icon next to OAuth2 and then copy the GOOGLE CLIENT ID and GOOGLE SECRET and paste them into your .env.
+   ![Google Auth Image 2](/public/GoogleAuth2.png)
+7. On the same page, add "http://localhost:3000" to the Authorized Javascript Origins and add "http://localhost:3000/api/auth/callback/google" to Authorized Redirect URIs.
+   ![Google Auth Image 3](/public/GoogleAuth3.png)
+
 8. Hit save.
 
 ## Firebase Keys
