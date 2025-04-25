@@ -1,6 +1,6 @@
-# Calendr App
+# AI-Powered Calendar and Task Management App
 
-A modern pastel-themed calendar app built with **Next.js** and **Tailwind CSS**.
+A modern calendar and task management application built with **Next.js** and **Tailwind CSS**, enhanced with AI capabilities.
 
 ## 🚀 Quick Start
 
@@ -82,6 +82,60 @@ AUTH_FIREBASE_PRIVATE_KEY="your_firebase_private_key"
 - **Firebase Config**:
   - Set up a project at [Firebase Console](https://console.firebase.google.com/).
   - Use the web app config and service account keys.
+
+# Firebase Setup
+
+1. Create a new Firebase project.
+2. On the left sidebar, create and enable Firestore and Authentication (2 modules).
+3. Keep defaults for Firestore or you can enable test mode which may work better.
+
+## Authentication
+
+4. For Authentication, add a new provider and choose Google and enable.
+5. When you click on the Google provider and hover over "Safelist client IDs from external projects (optional)," you should see a link to go to the Google console. Refer to image "GOOGLEAUTH1.png" in /public for a better idea.
+6. Click on the edit (pencil) icon next to OAuth2 and then copy the GOOGLE CLIENT ID and GOOGLE SECRET and paste them into your .env. "GOOGLEAUTH2.png"
+7. On the same page, add "http://localhost:3000" to the Authorized Javascript Origins and add "http://localhost:3000/api/auth/callback/google" to Authorized Redirect URIs. "GOOGLEAUTH3.png"
+8. Hit save.
+
+## Firebase Keys
+
+9. Go back to Firebase [Console](https://console.firebase.google.com/u/3/project/[APP_ID/NAME]/overview).
+10. Click on "Add App" and choose web app (3rd icon).
+11. Give it any name. It will give you the SDK.
+12. Copy the individual variables inside the firebaseConfig part of the SDK and put them under their respective sections in the .env file WITHOUT the quotations.
+
+## Firebase Admin service account keys
+
+1. Go to [Firebase Service Accounts](https://console.firebase.google.com/u/3/project/[APP_ID/NAME]/settings/serviceaccounts/adminsdk).
+2. Generate a new private key.
+3. Open in VS Code or any code editor.
+4. Copy Project ID and Client Email WITHOUT the quotations.
+5. Copy the Private Key WITH the quotations.
+6. By now you should have all the variables required.
+
+## EXAMPLE OF A VALID .ENV File
+
+---
+
+    NEXTAUTH_URL=http://localhost:3000
+    NEXTAUTH_SECRET=214214214214214sdoaodska1242o14i21o421o4214j214o14
+    NODE_ENV=production
+
+    NEXT_PUBLIC_OPENAI_API_KEY=sk-proj-1ASDrYZSAI-AO1sSDoaMSOMAFSOSMCOASDKFNSNDAOSOCSODSOSISOISOCNAODSOAS
+
+    GOOGLE_ID=921051201i29421-kfalk1okaslkp1mkasmdksaasdas.apps.googleusercontent.com
+    GOOGLE_SECRET=GOAMAS-kasnMeasmfeoasfnoasmeoasokdeaeg
+
+    NEXT_FIREBASE_API_KEY=AIs1mfampask1gj10mfasp121k321
+    NEXT_FIREBASE_AUTH_DOMAIN=calendr-ga31b.firebaseapp.com
+    NEXT_FIREBASE_PROJECT_ID=calendr-ga31b
+    NEXT_FIREBASE_STORAGE_BUCKET=calendr-ga31b.appspot.com
+    NEXT_FIREBASE_MESSAGING_SENDER_ID=963783405185
+    NEXT_FIREBASE_APP_ID=1:963783405185:web:c5b8852860b4bd9574e780
+    NEXT_FIREBASE_MEASUREMENT_ID=G-9T81QXST0Y
+    AUTH_FIREBASE_PROJECT_ID=calendr-ga31b
+    AUTH_FIREBASE_CLIENT_EMAIL=firebase-adminsdk-g92sk@calendr-12ala.iam.gserviceaccount.com
+    AUTH_FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEICONDENSEDTHISPARTBECAUSEITWASSOLONGJ\n-----END PRIVATE KEY-----\n"
 
 ---
 
