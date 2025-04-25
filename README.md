@@ -79,15 +79,22 @@ AUTH_FIREBASE_PRIVATE_KEY="your_firebase_private_key"
 - **Google Auth**:
   - Create OAuth credentials [in Google Cloud Console](https://console.cloud.google.com/).
   - Add `http://localhost:3000` to Authorized Redirect URIs.
+
+![Google Auth Image 1](GOOGLEAUTH1.png)
+
 - **Firebase Config**:
   - Set up a project at [Firebase Console](https://console.firebase.google.com/).
   - Use the web app config and service account keys.
 
-# Firebase Setup
+![Google Auth Image 2](GOOGLEAUTH2.png)
+
+## Firebase Setup
 
 1. Create a new Firebase project.
 2. On the left sidebar, create and enable Firestore and Authentication (2 modules).
 3. Keep defaults for Firestore or you can enable test mode which may work better.
+
+![Google Auth Image 3](GOOGLEAUTH3.png)
 
 ## Authentication
 
@@ -104,7 +111,7 @@ AUTH_FIREBASE_PRIVATE_KEY="your_firebase_private_key"
 11. Give it any name. It will give you the SDK.
 12. Copy the individual variables inside the firebaseConfig part of the SDK and put them under their respective sections in the .env file WITHOUT the quotations.
 
-## Firebase Admin service account keys
+Firebase Admin service account keys
 
 1. Go to [Firebase Service Accounts](https://console.firebase.google.com/u/3/project/[APP_ID/NAME]/settings/serviceaccounts/adminsdk).
 2. Generate a new private key.
@@ -117,6 +124,7 @@ AUTH_FIREBASE_PRIVATE_KEY="your_firebase_private_key"
 
 ---
 
+    ```bash
     NEXTAUTH_URL=http://localhost:3000
     NEXTAUTH_SECRET=214214214214214sdoaodska1242o14i21o421o4214j214o14
     NODE_ENV=production
@@ -136,6 +144,7 @@ AUTH_FIREBASE_PRIVATE_KEY="your_firebase_private_key"
     AUTH_FIREBASE_PROJECT_ID=calendr-ga31b
     AUTH_FIREBASE_CLIENT_EMAIL=firebase-adminsdk-g92sk@calendr-12ala.iam.gserviceaccount.com
     AUTH_FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEICONDENSEDTHISPARTBECAUSEITWASSOLONGJ\n-----END PRIVATE KEY-----\n"
+    ```
 
 ---
 
